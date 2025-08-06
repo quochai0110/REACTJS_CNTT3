@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+      function typeConsole(name) {
+        if (name == "warn") {
+          console[name]("Đây là type warn");
+        }else if (name == "error") {
+          console[name]("Đây là type error");
+        } else if (name == "log ") {
+          console[name]("Đây là type log");
+        } else {
+          console.log("Đây là type log");
+        
+        }
+      }
+      typeConsole("log");
+      typeConsole("warn");
+      typeConsole("error");
+      typeConsole("");
+    </script>
+  </body>
+</html>

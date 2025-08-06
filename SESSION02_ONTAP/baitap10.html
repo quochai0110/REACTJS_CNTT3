@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> DANH SÁCH SẢN PHẨM </h1>
+    <div class="list-products">
+        <ul id="list">
+            <li>Name: </li>
+            <li>Gía: </li>
+            <button>mua</button>
+        </ul>
+    </div>
+    <div> <button>thanh toán!</button></div>
+    <script>
+        let products=[
+            {
+                id:1,
+                name:"iphone5",
+                price:100,
+                discount:0.1,
+                quantity:2
+            },
+            {
+                id:2,
+                name:"iphone7",
+                price:200,
+                discount:0.1,
+                quantity:50,
+                bulkdiscount:{minQuantity:2,extraDiscount:0.05}
+            },
+            {
+                id:3,
+                name:"iphone7",
+                price:300,
+                discount:0.1,
+                quantity:20,
+                bulkdiscount:{minQuantity:3,extraDiscount:0.1}
+            },
+        ]
+
+         // tạo hàm render sản phẩm để đi bán
+         function render(){
+            let html="";
+            for (let i = 0; i < products.length; i++) {
+               html+=
+               `
+                 <li>Name: ${products[i].name} </li>
+                 <li>Gía: ${products[i].price}</li>
+                <button onclick="addToCart(${i})">mua</button>
+               `
+                
+            }
+            document.getElementById("list").innerHTML= html;
+         }
+         render();
+
+         // tạo giỏ hàng để đi mua
+         let cart=[];
+
+         // hàm đi mua hàng
+          function addToCart(index) {
+            // console.log("vị trí san pham", index);
+            // kiểm tra xem sản phẩm còn hàng hay không?
+            // nếu còn hàng thì push vào giỏ hàng và giảm sản phẩm trong cửa hàng đi 1
+            if(products[index].quantity>0){
+                //còn hàng
+                // khi thêm vào giỏ hàng thì kiểm tra xem sản phẩm đã có trong cửa hàng hay chưa
+                // nếu có rồi thì tăng số lượng còn nếu chưa có thì push vào
+                let findIndex= cart.findIndex((item)=>{
+                       return item.id== products[index].id
+                })
+                if(findIndex==-1){
+                    // sản phẩm chưa có thì thêm vào
+                    
+                    cart.push({...products[index], quantity:1});
+                    products[index].quantity--;
+                }else{
+                    cart[findIndex].quantity= ++ cart[findIndex].quantity;
+                    products[index].quantity--;
+
+                }
+                
+            }else{
+                console.log("sản phẩm đã hết hàng!");
+                return;
+            }
+            console.log("giỏ hàng",cart);
+            console.log(products);
+            
+            
+          }
+
+
+    </script>
+</body>
+</html>

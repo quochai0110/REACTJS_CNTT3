@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    Input
+    ["eat", "tea", "tan", "ate", "nat", "bat", "tab"];
+
+    Output
+    [["eat","tea","ate"], ["tan","nat"], ["bat","bat"]]
+
+
+
+    -->
+    <script>
+     function filter(array) {
+        let obj ={};
+        // b1 lấy từng phần
+        for (let i = 0; i < array.length; i++) {
+           let word=array[i].split("").sort().join("");
+            if(!obj[word] ){
+                obj[word]= [];
+            }
+            obj[word].push(array[i]);
+        }
+        return Object.values(obj);
+     }
+     let test1=["eat", "tea", "tan", "ate", "nat", "bat", "tab"];
+     let test2=["123"];
+     filter(test1);
+        
+    </script>
+</body>
+</html>
