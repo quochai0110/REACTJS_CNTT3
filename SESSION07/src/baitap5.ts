@@ -65,6 +65,7 @@ class userAcc extends Account {
         id:string,
         userName:string,
         password:string,
+        isLogin:boolean,
         role:string,
         status: "active"|"banned"
 
@@ -82,3 +83,9 @@ class userAcc extends Account {
 }
 
 // const user1 = new userAcc("01","tranxuanbach","1234")
+interface History{
+    date:string
+}
+class A{
+    history:History[]
+}
