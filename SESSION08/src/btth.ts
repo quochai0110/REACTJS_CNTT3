@@ -14,7 +14,7 @@ class Book {
   }
 }
 // BƯỚC 2: Tạo class Library và các phương thức
-class Library<T extends { id: number; name: string, author:string, year:number }> {
+class Library<T extends { id: number; title: string, author:string, year:number }> {
   books: T[] = []; // Tạo 1 mảng chứa danh sách các quyển sách
 
   // 1. Thêm sách vào thư viện
@@ -52,7 +52,7 @@ class Library<T extends { id: number; name: string, author:string, year:number }
   // 5. listBooks(): T[] – Lấy danh sách tất cả sách trong thư viện.( for, forEach...)
   // 6. findBooksByTitleOrAuthor(searchTerm: string): T[] – Tìm sách theo tên hoặc tác giả.
   findBooksByTitleOrAuthor(searchTerm: string):T[]{
-    return this.books.filter(item=>item.name.includes(searchTerm.toLowerCase()))||
+    return this.books.filter(item=>item.title.includes(searchTerm.toLowerCase()))||
     this.books.filter(item=>item.author.includes(searchTerm.toLowerCase()))
   }
   // 7. getTotalBooks(): number: đếm tổng sách có trong thư viện
@@ -64,3 +64,6 @@ class Library<T extends { id: number; name: string, author:string, year:number }
     return this.books.filter(item=>item.year===year);
   }
 }
+const book1= new Book(1,"nhà giả kim","a",2015);
+const library= new Library();
+library.addBook(book1);
