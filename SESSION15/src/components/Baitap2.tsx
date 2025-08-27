@@ -1,33 +1,32 @@
 import React, { Component } from 'react'
-type Color = {
-    color: string
-    fount: boolean
+type State={
+    color:string
+    tempColor:string
 }
-
-export default class Baitap2 extends Component <object, Color> {
-    constructor(props: object){
-        super(props);
-        this.state = {
-            color: "",
-            fount: false
+export default class Baitap2 extends Component<object,State> {
+    constructor(props:object){
+        super(props)
+        this.state={
+            color:"",
+            tempColor:""
         }
     }
-    handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        this.setState({fount: true});
+    handleChange=(e:React.ChangeEvent<HTMLInputElement>)=>{
+        this.setState({tempColor:e.target.value})
     }
-    handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        this.setState({color: e.target.value});
-        this.setState({fount: false});
+    handleClick=(e:React.MouseEvent<HTMLButtonElement>)=>{
+        e.preventDefault()
+        this.setState({color:this.state.tempColor})
     }
   render() {
     return (
       <div>
-        Bài tập 2
-        <h2>Color: {this.state.fount ? this.state.color : ""}  </h2>
-        <form action="" onSubmit={this.handleSubmit}>
-            <input type="color" onChange={this.handleChange}/>
-            <button>submit</button>
+        <h1>Bài tập 2</h1>
+        <form action="">
+            <h1>Color:{this.state.color}</h1>
+            <label htmlFor="">Màu sắc</label> <br />
+            <input type="color" onChange={this.handleChange} /> <br />
+            <button onClick={this.handleClick}>Submit</button>
         </form>
       </div>
     )

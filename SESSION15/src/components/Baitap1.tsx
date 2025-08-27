@@ -1,32 +1,32 @@
-import React, { Component } from 'react'
-type InitState = {
-    email:string
+import { Component } from 'react'
+type State = {
+    user: {email:string}
 }
-export default class Baitap1 extends Component<{},InitState> {
+export default class Baitap1 extends Component<{}, State>{
     constructor(props:{}){
-        super(props)
+        super(props);
         this.state = {
-            email : ""
-        }
+            user: {email:""}
+        };
     }
-  handleSubmit = (e:React.ChangeEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(this.state.email);
-  }
-  handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({
-        email:e.target.value
-    })
-  }
-    render() {
+
+    handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({user:{email:e.target.value}})
+    }
+    handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        console.log("Gia tri nguoi dung nhap la: ", this.state.user);  
+    }
+  render() {
     return (
       <div>
-        Bài Tập 1
-        <form action="" onSubmit={this.handleSubmit} >
-            <label htmlFor="">Email:</label><br />
-            <input type="text" name="email" id="" placeholder='nhap email' onChange={this.handleChange}/>
-            <button>Submit</button>
+        <h1>Bài tập 1</h1>
+        <h1>FORM</h1>
+        <form onSubmit={(this.handleSubmit)}>
+            <input type="email" onChange={(this.handleChange)}/>
+            <button type = "submit">Submit</button>
         </form>
+       
       </div>
     )
   }
