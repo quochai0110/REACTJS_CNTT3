@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "Minh Hà",
+      "id": 1
+    },
+    {
+      "name": "Minh Hằng",
+      "id": 3
+    },
+    {
+      "name": "Thu",
+      "id": 4
+    },
+    {
+      "name": "Hoàng",
+      "id": 5
+    },
+    {
+      "name": "Nam",
+      "id": 6
+    },
+    {
+      "name": "Đại",
+      "id": 7
+    }
+  ]
+}
