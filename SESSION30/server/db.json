@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "minh thu",
+      "email": "thu@gmail.com",
+      "age": 18
+    },
+    {
+      "id": 3,
+      "name": "vân",
+      "email": "van@gmail.com",
+      "age": 19
+    },
+    {
+      "id": 4,
+      "name": "lan ngọc",
+      "email": "ngoc@gmail.com",
+      "age": 21
+    },
+    {
+      "id": 5,
+      "name": "ngọc",
+      "email": "ngoc@gmail.com",
+      "age": 18
+    },
+    {
+      "name": "minh hằng",
+      "email": "hang@gmail.com",
+      "age": 18,
+      "id": 6
+    }
+  ]
+}
