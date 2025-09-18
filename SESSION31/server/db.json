@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "bài viết 01",
+      "image": "ảnh bài viết 01",
+      "date": "18/9/2025",
+      "status": true,
+      "content": "nội dung bài viết 01"
+    }
+  ]
+}
