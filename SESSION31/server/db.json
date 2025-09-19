@@ -1,12 +1,20 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "bài viết 01",
-      "image": "ảnh bài viết 01",
+      "title": "gf",
+      "image": "gfgfgf",
       "date": "18/9/2025",
-      "status": true,
-      "content": "nội dung bài viết 01"
+      "status": false,
+      "content": "gfgfgfg",
+      "id": 2
+    },
+    {
+      "title": "22",
+      "image": "rêr",
+      "date": "18/9/2025",
+      "status": false,
+      "content": "rêrerer",
+      "id": 3
     }
   ]
 }
