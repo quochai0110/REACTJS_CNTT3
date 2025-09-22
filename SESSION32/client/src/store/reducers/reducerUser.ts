@@ -20,7 +20,9 @@ const initialState={
 export const reducerUser = (state=initialState, action:Action)=>{
     switch (action.type) {
         case "ADD":
-            console.log("case thêm sinh viên");
+            console.log();
+            
+            
             
             break;
     
