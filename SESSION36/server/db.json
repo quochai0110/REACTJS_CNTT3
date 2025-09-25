@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Minh Thu",
+      "email": "thu@gmail.com"
+    },
+     {
+      "id": 2,
+      "name": "Minh Huyền",
+      "email": "huyen@gmail.com"
+    },
+     {
+      "id": 3,
+      "name": "Lan Hồng",
+      "email": "hong@gmail.com"
+    }
+  ]
+  
+}
