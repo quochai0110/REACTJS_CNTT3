@@ -1,0 +1,25 @@
+{
+  "books":[
+    {
+      "id":1,
+      "title":"Lão Hạc",
+      "author":"Nam Cao",
+      "year":2001,
+      "category":"văn học"
+    },
+    {
+      "id":2,
+      "title":"Đắc Nhân Tâm",
+      "author":"Dale Carnegie",
+      "year":2000,
+      "category":"giao tiếp"
+    },
+    {
+      "id":3,
+      "title":"Cha giàu cha nghèo",
+      "author":"Robert",
+      "year":2003,
+      "category":"kinh doanh"
+    }
+  ]
+}
