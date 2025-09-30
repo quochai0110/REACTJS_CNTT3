@@ -1,0 +1,10 @@
+{
+  "products":[
+    {
+      "id":1,
+       "product_name":"iphone17",
+       "price":30000000,
+        "image":""
+    }
+  ]
+}
